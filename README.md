@@ -24,6 +24,12 @@ Build for production:
 npm run build
 ```
 
+## Build & Deployment
+
+- **Build Script**: `npm run build`
+- **Output Directory**: `dist`
+- **Cloudflare Routing**: Configured via `public/_redirects` for Single Page Application routing (`/* /index.html 200`).
+
 ## Controls & Features
 
 - **3D Spatial Polyominoes**: Solid 3D bricks with 0-gap separation.

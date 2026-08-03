@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+:root {
+  --neon-cyan: #00f3ff;
+  --neon-magenta: #ff007f;
+  --neon-yellow: #ffe600;
+  --neon-orange: #ff6600;
+  --neon-green: #00ff66;
+  --neon-purple: #9d00ff;
+  --bg-dark: #030308;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-dark);
+  color: #e2e8f0;
+  font-family: 'Rajdhani', 'Inter', sans-serif;
+  overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+h1, h2, h3, .font-orbitron {
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* Custom Cyberpunk Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.8);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 243, 255, 0.4);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 243, 255, 0.8);
+}
+
+/* Glassmorphism Panel */
+.cyber-panel {
+  background: rgba(8, 12, 24, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 243, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.7),
+              inset 0 0 12px 0 rgba(0, 243, 255, 0.1);
+}
+
+.cyber-panel-magenta {
+  background: rgba(20, 8, 24, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 0, 127, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.7),
+              inset 0 0 12px 0 rgba(255, 0, 127, 0.15);
+}
+
+/* Glowing Neon Text & Borders */
+.glow-cyan {
+  text-shadow: 0 0 8px rgba(0, 243, 255, 0.8), 0 0 20px rgba(0, 243, 255, 0.4);
+}
+
+.glow-magenta {
+  text-shadow: 0 0 8px rgba(255, 0, 127, 0.8), 0 0 20px rgba(255, 0, 127, 0.4);
+}
+
+.glow-yellow {
+  text-shadow: 0 0 8px rgba(255, 230, 0, 0.8), 0 0 20px rgba(255, 230, 0, 0.4);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Keyframes for pulse */
+@keyframes neonPulse {
+  0%, 100% { opacity: 1; filter: drop-shadow(0 0 10px rgba(0, 243, 255, 0.8)); }
+  50% { opacity: 0.6; filter: drop-shadow(0 0 25px rgba(255, 0, 127, 1)); }
+}
+
+.animate-neon-pulse {
+  animation: neonPulse 2s infinite ease-in-out;
+}
+
